@@ -1,4 +1,4 @@
-package setup.setup
+package setup_iris
 import bananatui.*
 import bananacmd.isProgramRoot
 import setup.distroFinder._

@@ -1,4 +1,4 @@
-package setup.dependencyInstall
+package setup_iris.systemCommands
 import setup.sysUpdate._
 import setup.distroFinder.{getHome, getPackageManager}
 import scala.io.Source

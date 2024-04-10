@@ -1,4 +1,4 @@
-package setup.sysUpdate
+package setup_iris.systemCommands
 
 import setup.distroFinder.getPackageManager
 import setup.dependencyInstall._

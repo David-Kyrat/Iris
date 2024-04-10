@@ -1,4 +1,4 @@
-package setup.distroFinder
+package setup_iris.systemCommands
 
 import scala.sys.process._
 import scala.io.Source
