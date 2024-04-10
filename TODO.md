@@ -18,6 +18,8 @@ If not using a build tool that will install them automatically, add instructions
 
 ## Should Have
 
+- [ ] Putting all code in a `src` or `src/main/scala` directory, the latter is the standard directory structure for Scala projects.
+
 - [ ] Tests ? (Although since the project is based on graphical stuff it might be hard to implement some relevant tests)
 
 - [ ] Code formatting: Use the vscode extension, IntelliJ or you editor of choice's code formatter to format your code. (e.g `List("a","b"+getHome()+"c","d")` => `List("a", "b" + getHome() + "c", "d")`)
@@ -56,8 +58,6 @@ If not using a build tool that will install them automatically, add instructions
 ## Nice to Have
 
 - [ ] A build tool, to automatically install dependencies, compile, run and package the project. I wholeheartedly recommend using [mill](https://mill-build.com/mill/Intro_to_Mill.html) for this, [download mill](https://mill-build.com/mill/Installation_IDE_Support.html#_bootstrap_scripts).
-
-- [ ] Putting all code in a `src` or `src/main/scala` directory, the latter is the standard directory structure for Scala projects.
 
 - [ ] Using string interpolation, when it increase readability.
 
