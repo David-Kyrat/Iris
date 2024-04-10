@@ -1,4 +1,4 @@
-package iris.iris
+package iris
 import iris.interface._
 import iris.theming._
 import iris.themeSelector._

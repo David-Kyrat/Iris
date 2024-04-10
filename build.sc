@@ -3,7 +3,7 @@ import mill._, scalalib._
 object foo extends RootModule with ScalaModule {
   def scalaVersion = "3.3.1"
 
-  // You can have arbitrary numbers of dependencies
+  // Here you add the external libraries (dependencies) that you want to use. They are of the form "author::name:version"
   def ivyDeps = Agg(
     ivy"com.lihaoyi::os-lib:0.9.1",
   )
