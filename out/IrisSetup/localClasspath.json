@@ -1,0 +1,9 @@
+{
+    "value": [
+        "ref:v0:c984eca8:/root/iris/IrisSetup/compile-resources",
+        "ref:v0:c984eca8:/root/iris/IrisSetup/resources",
+        "ref:v0:c984eca8:/root/iris/out/IrisSetup/compile.dest/classes"
+    ],
+    "valueHash": -1951154352,
+    "inputsHash": 1163864089
+}

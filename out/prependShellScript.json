@@ -1,0 +1,5 @@
+{
+    "value": "@ 2>/dev/null # 2>nul & echo off & goto BOF\r\n:\nexec java  $JAVA_OPTS -cp \"$0\" 'iris.main' \"$@\"\nexit\n\r\n:BOF\r\nsetlocal\r\n@echo off\r\njava  %JAVA_OPTS% -cp \"%~dpnx0\" iris.main %*\r\nendlocal\r\nexit /B %errorlevel%\r\n",
+    "valueHash": -1745966110,
+    "inputsHash": -1474637798
+}
