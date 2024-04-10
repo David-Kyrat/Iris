@@ -1,6 +1,6 @@
 package setup_iris.systemCommands
-import setup.sysUpdate._
-import setup.distroFinder.{getHome, getPackageManager}
+import setup_iris.sysUpdate._
+import setup_iris.distroFinder.{getHome, getPackageManager}
 import scala.io.Source
 import scala.sys.process._
 import java.io.File

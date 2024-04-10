@@ -4,8 +4,8 @@ import scala.sys.process._
 import scala.io.Source
 import java.io.File
 import bananatui.*
-import setup.sysUpdate._
-import setup.dependencyInstall._
+import setup_iris.sysUpdate._
+import setup_iris.dependencyInstall._
 
 def getHome() = System.getProperty("user.home")
 

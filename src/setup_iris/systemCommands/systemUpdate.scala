@@ -1,7 +1,7 @@
 package setup_iris.systemCommands
 
-import setup.distroFinder.getPackageManager
-import setup.dependencyInstall._
+import setup_iris.distroFinder.getPackageManager
+import setup_iris.dependencyInstall._
 import bananatui.*
 import scala.sys.process._
 import setup.distroFinder.aptWho
