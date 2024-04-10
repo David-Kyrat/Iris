@@ -22,3 +22,6 @@ testing4.scala
 testing5.scala
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Never put jar in the repo, as it's automatically generated, and often too big to be accepted by github
+*.jar

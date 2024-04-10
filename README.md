@@ -65,3 +65,12 @@ You need Scala 3 to build Iris from source, and you can either use Scala-CLI or 
 # Thank you & Contributors
 - [Space Banana](https://github.com/spacebanana420)
 For helping me understand Scala's quirks, coding the harder parts of Iris, adding his libraries and more.
+
+# TODOs
+
+see [TODO.md](/TODO.md). Todos for the improvement of the project & code quality (along with explainations on how and why certain refactoring are necessary, focusing on the new features of scala3) are sorted into 3 sections:  
+
+- *Must Have*  
+- *Should Have* and  
+- *Nice to Have*.
+
