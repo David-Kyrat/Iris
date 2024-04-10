@@ -9,7 +9,7 @@ Most of these commands are in the project's Makefile, so if you have `Make`, you
 You can build a lightweight JAR with this command:
 
 ```bash
-make build_iris build_setup
+make build
 ```
 
 This builds Iris and the setup utility using the scala compiler. You can run them with scala: (watch out, these will rebuilt the JARs. So you don't need the step above)
