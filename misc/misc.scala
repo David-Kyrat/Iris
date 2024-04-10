@@ -1,4 +1,4 @@
-package misc.misc 
+package misc
 import scala.sys.process._
 import bananatui.*
 
