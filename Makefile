@@ -1,9 +1,9 @@
 DIR_IRIS=iris/*.scala iris/*/*.scala
-DIR_SETUP=setup-iris/*.scala setup-iris/*/*.scala
+DIR_SETUP=setup_iris/*.scala setup_iris/*/*.scala
 DIR_LIB=lib/*/*.scala
 DIR_MISC=misc/*.scala
 
-SETUP_JAR=setup-iris.jar
+SETUP_JAR=setup_iris.jar
 IRIS_JAR=iris.jar
 FLATPAK_JAR=misc-flatpak-override.jar
 
@@ -50,17 +50,17 @@ iris_fatjar:
 	scala-cli --power package iris lib --assembly --preamble=false --jvm 11 -f -o iris.jar
 
 setup_fatjar:
-	scala-cli --power package setup-iris lib --assembly --preamble=false --jvm 11 -f -o setup-iris-java.jar
+	scala-cli --power package setup_iris lib --assembly --preamble=false --jvm 11 -f -o setup_iris-java.jar
 
 misc_flatpak_fatjar:
 	scala-cli --power package misc lib --assembly --preamble=false --jvm 11 -f -o misc-flatpak-override-java.jar
 
 
 bootstrap_jar:
-	scala-cli --power package iris lib --assembly -o iris.jar && scala-cli --power package setup-iris lib --assembly -o setup-iris.jar && scala-cli --power package misc lib --assembly -o setup-iris.jar
+	scala-cli --power package iris lib --assembly -o iris.jar && scala-cli --power package setup_iris lib --assembly -o setup_iris.jar && scala-cli --power package misc lib --assembly -o setup_iris.jar
 
 bootstrap_jar_nodep:
-	scala-cli --power package iris lib -o iris.jar && scala-cli --power package setup-iris lib -o setup-iris.jar
+	scala-cli --power package iris lib -o iris.jar && scala-cli --power package setup_iris lib -o setup_iris.jar
 
 
 
