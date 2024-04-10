@@ -16,7 +16,7 @@ import setup.dependencyInstall._
       sysUpdate()
     sysDependencies()
     if askPrompt("Would you like to enable the setup to theme flatpaks?" +
-      "\nYou can always rerun this setup later if you change your mind about flatpak support." ) == true then
+      "\nYou can always rerun this setup later if you change your mind about flatpak support." ) then
       flathubInstall()
       installKvantumFlatpak()
       kvantumOverride()

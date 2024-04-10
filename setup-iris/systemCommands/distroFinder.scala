@@ -36,9 +36,9 @@ def getPackageManager(): String =
   
 def aptWho() =
   val ubCheck = askPrompt("Are you on Ubuntu or a derivative (like Pop!_OS)?")
-  if ubCheck == true then
+  if ubCheck then
     val ubVersion = askPrompt("Are you on Ubuntu LTS? Also known as 22.04, or in the Ubuntu derivatives based on 22.04?")
-    if ubVersion == true then 
+    if ubVersion then 
       kvantumUbuntuOld()
     else 
       pressToContinue("We will install the Papirus PPA to install a working version of Kvantum, a key component of Iris.\nYou can find the reason of this choice at IRIS-DOCS-LINK")

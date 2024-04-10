@@ -28,7 +28,7 @@ def mainMenu(): Unit =
         mainMenu()
       val warning = askPrompt(s"Are you sure you want to delete this configuration?" +
       s"\n$conflist will be lost forever! (A long time!)")
-        if warning == true then 
+        if warning then 
           deleteConfig(conflist)
           mainMenu()
         else 
@@ -122,7 +122,7 @@ def mainMenu(): Unit =
         case "Flatpak" =>
           val flatpakbool = askPrompt("Would you like to enable Flatpak theming? " +
             "\nIf you say yes you will later have to fill the other two Flatpak options.")
-          if flatpakbool == true then
+          if flatpakbool then
             replaceLine(confchange, themeLine, themeLine+"true")
             mainMenu()
           else 
@@ -158,7 +158,7 @@ def mainMenu(): Unit =
         case "Full QT Theming" =>
           val qtbool = askPrompt("Would you like to enable Full QT Theming?" +
             "\nThis means that your selected Icon Theme & Kvantum Theme will get applied to every QT program, including Flatpaks.")
-            if qtbool == true then 
+            if qtbool then 
               replaceLine(confchange, themeLine, themeLine+"true")
               mainMenu()
             else 
