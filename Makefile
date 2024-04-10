@@ -36,7 +36,7 @@ build_setup:
 
 # (optional for flatpaks)
 build_misc_flatpak:
-	scalac $(DIR_MISC) -d $(FLATPAK_JAR)
+	scalac $(DIR_MISC) $(DIR_LIB) -d $(FLATPAK_JAR)
 
 
 
