@@ -7,7 +7,8 @@ SETUP_JAR=setup-iris.jar
 IRIS_JAR=iris.jar
 FLATPAK_JAR=misc-flatpak-override.jar
 
-
+# When running for the 1st time
+run: run_setup run_misc_flatpak run_iris 
 
 # run build jar. has `build_iris` as dependency => will run `build_iris` first
 run_iris: build_iris
