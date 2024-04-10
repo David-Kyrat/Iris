@@ -17,10 +17,10 @@ run_iris: build_iris
 run_misc_flatpak: build_misc_flatpak
 	scala $(FLATPAK_JAR)
 
-
 # run setup jar. has `build_setup` as dependency => will run `build_setup` first
 run_setup: build_setup
 	scala $(SETUP_JAR)
+
 
 # build all
 build: build_iris build_setup build_misc_flatpak
@@ -38,19 +38,29 @@ build_misc_flatpak:
 	scalac $(DIR_MISC) -d $(FLATPAK_JAR)
 
 
+
 # Building the light jar is just building each jar individually. i.e. calling the `build` target
 light_jar: build
+
 
 fatjar: iris_fatjar setup_iris_fatjar misc_flatpak_fatjar
 
 iris_fatjar:
 	scala-cli --power package iris lib --assembly --preamble=false --jvm 11 -f -o iris.jar
 
-setup_iris_fatjar:
+setup_fatjar:
 	scala-cli --power package setup-iris lib --assembly --preamble=false --jvm 11 -f -o setup-iris-java.jar
 
 misc_flatpak_fatjar:
 	scala-cli --power package misc lib --assembly --preamble=false --jvm 11 -f -o misc-flatpak-override-java.jar
+
+
+bootstrap_jar:
+	scala-cli --power package iris lib --assembly -o iris.jar && scala-cli --power package setup-iris lib --assembly -o setup-iris.jar && scala-cli --power package misc lib --assembly -o setup-iris.jar
+
+bootstrap_jar_nodep:
+	scala-cli --power package iris lib -o iris.jar && scala-cli --power package setup-iris lib -o setup-iris.jar
+
 
 
 
