@@ -7,8 +7,14 @@ Further steps to improve the project & the code quality.
 - [ ] `Dependency` Section in the `README.md` with a list of dependencies.  
 If not using a build tool that will install them automatically, add instructions on how to install them.
 
-- [ ] Basic refactoring
-    - Switch all the statements like `if <boolean_value> == true` to `if <boolean_value>`
+- [ ] **Package must match the directory structure.**  
+    If a file is declared with the package is `bananatui`, then it should be placed in `/banatui` (where `/` is the root of the project).  
+    This is extremely important as it will tell the jvm where to look for files (and it is also the whole point of packages).
+
+- [ ] Basic refactoring  
+    Replace all the statements of the form `if <boolean_value> == true` to `if <boolean_value>`
+
+
 
 ## Should Have
 
