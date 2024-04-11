@@ -68,7 +68,7 @@ For helping me understand Scala's quirks, coding the harder parts of Iris, addin
 
 # TODOs
 
-see [TODO.md](/TODO.md). Todos for the improvement of the project & code quality (along with explainations on how and why certain refactoring are necessary, focusing on the new features of scala3) are sorted into 3 sections:  
+see [TODO_and_why.md](/TODO_and_why.md). Todos for the improvement of the project & code quality (along with explainations on how and why certain refactoring are necessary, focusing on the new features of scala3) are sorted into 3 sections:  
 
 - *Must Have*  
 - *Should Have* and  
