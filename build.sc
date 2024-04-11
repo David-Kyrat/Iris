@@ -20,12 +20,12 @@ object Iris extends RootModule with ScalaModule {
     def scalaVersion = "3.3.1"
 
     // Choose a main class to use for `mill run` if there are multiple present
-    def mainClass = Some("iris-setup.main")
+    def mainClass = Some("setupIris.main")
     // os.pwd refers to where this file is located
 
     // Add (or replace) source folders for the module to use
     def sources = T.sources(
-       src / "iris-setup",
+       src / "setupIris",
     )
   }
 }
