@@ -1,6 +1,6 @@
-package misc.misc 
+package misc
 import scala.sys.process._
-import bananatui.*
+import lib.bananatui.*
 
 
 @main def main() =
@@ -10,7 +10,7 @@ import bananatui.*
   def flatpakIconOverride() = List("sudo", "flatpak", "override", "--filesystem="+getHome()+"/.icons").!<
   val finishFlatpakOverrides = askPrompt("Due to limitations of Iris and the JVM's libraries, we had to make this third program to finish Iris' setup" +
     "\nIf you want to allow Iris to theme flatpaks' Icon and GTK themes say yes.")
-  if finishFlatpakOverrides == true then 
+  if finishFlatpakOverrides then 
     flatpakIconOverride()
     flatpakGtkOverride()
   else 

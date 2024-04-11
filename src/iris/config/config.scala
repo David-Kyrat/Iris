@@ -5,7 +5,7 @@ import java.io.OutputStreamWriter
 import java.io.FileWriter
 import scala.io.Source
 import scala.util.matching.Regex
-import bananatui.*
+import lib.bananatui.*
 import iris.theming._
 
 
@@ -144,7 +144,7 @@ def createConfig(confname: String) =
     val makeconf = FileWriter(File(configLocation+confnameNoWhitespace))
     makeconf.write(settings)
     makeconf.close()
-  else if File(configLocation+confnameNoWhitespace).exists() == true then
+  else if File(configLocation+confnameNoWhitespace).exists() then
     println("TODO, TUI error message config already exists, reasks question")
   else 
     val makeconf = FileWriter(File(configLocation+confnameNoWhitespace))

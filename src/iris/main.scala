@@ -1,9 +1,9 @@
-package iris.iris
+package iris
 import iris.interface._
 import iris.theming._
-import iris.themeSelector._
+import iris.interface._
 import iris.config._
-import bananatui.*
+import lib.bananatui.*
 
 
 

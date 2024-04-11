@@ -1,9 +1,7 @@
-package setup.setup
-import bananatui.*
-import bananacmd.isProgramRoot
-import setup.distroFinder._
-import setup.sysUpdate._
-import setup.dependencyInstall._
+package setupIris
+import lib.bananatui.*
+import lib.bananacmd.isProgramRoot
+import setupIris.systemCommands._
 
 
 @main def main() =
@@ -16,7 +14,7 @@ import setup.dependencyInstall._
       sysUpdate()
     sysDependencies()
     if askPrompt("Would you like to enable the setup to theme flatpaks?" +
-      "\nYou can always rerun this setup later if you change your mind about flatpak support." ) == true then
+      "\nYou can always rerun this setup later if you change your mind about flatpak support." ) then
       flathubInstall()
       installKvantumFlatpak()
       kvantumOverride()
