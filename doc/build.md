@@ -3,64 +3,74 @@
 Iris requires Scala 3 to build from source. You can use the scala compiler directly, or use scala-cli.
 Most of these commands are in the project's Makefile, so if you have `Make`, you can run them.
 
+# Compiling the project
 
-# Building a lightweight JAR
-
-You can build a lightweight JAR with this command:
+To compile just iris (the root module)
 
 ```bash
-make build
+mill compile
 ```
 
-This builds Iris and the setup utility using the scala compiler. You can run them with scala: (watch out, these will rebuilt the JARs. So you don't need the step above)
+To compile iris-setup (module `SetupIris`)
 
 ```bash
-make run_iris run_setup
+mill SetupIris.compile
 ```
 
-If you prefer to use Scala-CLI instead, here's the command:
+# Running the project
+
+To run just iris (the root module)
 
 ```bash
-scala-cli --power package iris lib --library -o iris.jar
-scala-cli --power package setup-iris lib --library -o setup-iris.jar
+mill run
 ```
 
-These can only be run with Scala-CLI.
-
-# Building an assembly JAR
-
-With Scala-CLI, you can build an assembly JAR, which contains all the runtime and dependencies and so it can be run directly with Java:
+To run iris-setup (module `SetupIris`)
 
 ```bash
-make iris_fatjar setup_fatjar
+mill SetupIris.run
 ```
 
-You can run Iris with Java:
+
+# Building JARs
+
+With mill, you can build it like this:
 
 ```bash
-java -jar iris.jar
-java -jar setup-iris.jar
-```
-
-# Building bootstrap JARs
-
-A bootstrap works like an executable, in the sense that you can run it as if it was one.
-
-With Scala-CLI, you can build a bootstrap, like this:
-
-```bash
-make bootstrap_jar_nodep
+mill assembly && mill SetupIris.assembly
 ```
 
 Having Scala in your system, you can then run it as if it was an executable:
 
 ```bash
-./iris.jar
-./setup-iris.jar
+./out/assembly.dest/out.jar
+./out/SetupIris/assembly.dest/out.jar
 ```
 
-If you want to include all dependencies in your bootstrap and only rely on Java, then you can build the following way:
+or with java 
 
 ```bash
-make bootstrap_jar
+java -jar out/assembly.dest/out.jar
+java -jar out/SetupIris/assembly.dest/out.jar
 ```
+By default mill builds a "bootstrap assembly" jar or "bootstrap fat jar".  
+This means that the jar will contain the Scala runtime and the dependencies and will work like an executable.  
+A bootstrap works like an executable, in the sense that you can run it as if it was one. Other than that its a normal jar.
+
+## Building a lightweight JAR
+
+You can build a lightweight JAR with scala-cli:
+
+```bash
+make light_jar
+```
+
+These can only be run with Scala-CLI, as the makefile will call
+
+```bash
+scala-cli --power package -f src/iris src/lib --library -o iris.jar
+scala-cli --power package -f src/setupIris src/lib --library -o setup-iris.jar
+scala-cli --power package -f src/misc src/lib --library -o misc_flatpak.jar
+```
+
+This will create 3 jars, `iris.jar`, `setup-iris.jar` and `misc_flatpak.jar`.  
