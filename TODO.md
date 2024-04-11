@@ -4,16 +4,44 @@ Further steps to improve the project & the code quality.
 
 ## Must Have
 
-- [ ] `Dependency` Section in the `README.md` with a list of dependencies.  
-If not using a build tool that will install them automatically, add instructions on how to install them.
+<div style="color: blue" >
 
 - [ ] **Package must match the directory structure.**  
-    If a file is declared with the package is `bananatui`, then it should be placed in `/banatui` (where `/` is the root of the project).  
-    This is extremely important as it will tell the jvm where to look for files (and it is also the whole point of packages).
+    This is **extremely important** as it will tell the jvm / compiler  **where to look** for files, when you try to **import functions** (and it is also the whole point of packages).  
+    - Putting `package iris.theming` on top of a file *whatever.scala*, tells scala:  
+    *"Hey `whatever.scala` is in the directory `iris/theming`"*.  
+    (e.g. putting `package iris.iris` on top of `iris/main.scala` tells scala that your main.scala is in `iris/iris` directory).  
+
+    - If you have the file  `iris/systemCommands/theming.scala` then you **must** put  
+    `package iris.systemCommands` at the top of `theming.scala`. If you want to change the package. Create a new directory, put theming.scala in it or rename the existing one.  
+    
+    - **Imports**:  
+    Now this is probably the "why the points above are importants".  
+    When you have (e.g. in `theming.scala`) `import iris.themeSelector._` at the top of the file. This tells scala.  
+    *"I want to use everything that is in the package `iris.themeSelector`"*
+    i.e. everything that is in the directory `iris/themeSelector` (which does not exist).  
+    To import the functions from the file `iris/interface/themeSelector.scala` instead you should do import `iris.interface._`.  
+    <br/> This will import everything `iris.interface`.  If you only want to import the things from the `themesSelector.scala` file you'll have to create an `object` and put the functions in it. e.g. 
+    ```scala
+    package iris.interface
+    // your imports here
+
+    object ThemeSelector {
+        def askDesktop(): String = {...}
+        def setDesktopTheme(filename: String, theme String) = {...}
+    }
+    ```
+    you'll then be able to import the `askDesktop()` function like `import iris.interface.ThemeSelector.askDesktop` or `import iris.interface.ThemeSelector._` to import everything.
+
+    However creating object like this, is *not mandatory* and you could just import everything from the `interface` package without any major problem.
+
+
+    
+
+</div>
 
 - [ ] Basic refactoring  
     Replace all the statements of the form `if <boolean_value> == true` to `if <boolean_value>`
-
 
 
 ## Should Have
