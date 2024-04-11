@@ -1,10 +1,8 @@
-package setup_iris.systemCommands
+package setupIris.systemCommands
 
-import setup_iris.distroFinder.getPackageManager
-import setup_iris.dependencyInstall._
+import setupIris.systemCommands.{aptWho, getPackageManager}
 import bananatui.*
 import scala.sys.process._
-import setup.distroFinder.aptWho
 
 
 val package_manager = getPackageManager()

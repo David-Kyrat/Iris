@@ -1,0 +1,145 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "root-module",
+        "directory": "/home/noahl/tests/scala3/Iris",
+        "workspaceDir": "/home/noahl/tests/scala3/Iris",
+        "sources": [
+            "/home/noahl/tests/scala3/Iris/src"
+        ],
+        "dependencies": [
+            
+        ],
+        "classpath": [
+            "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/os-lib_3/0.9.1/os-lib_3-0.9.1.jar",
+            "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1.jar",
+            "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/geny_3/1.0.0/geny_3-1.0.0.jar",
+            "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar"
+        ],
+        "out": "/home/noahl/tests/scala3/Iris/.bloop/out/root-module",
+        "classesDir": "/home/noahl/tests/scala3/Iris/.bloop/out/root-module/classes",
+        "resources": [
+            "/home/noahl/tests/scala3/Iris/resources"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "3.3.1",
+            "options": [
+                
+            ],
+            "jars": [
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/3.3.1/scala3-compiler_3-3.3.1.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-interfaces/3.3.1/scala3-interfaces-3.3.1.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/tasty-core_3/3.3.1/tasty-core_3-3.3.1.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-asm/9.5.0-scala-1/scala-asm-9.5.0-scala-1.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-interface/1.3.5/compiler-interface-1.3.5.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-reader/3.19.0/jline-reader-3.19.0.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal/3.19.0/jline-terminal-3.19.0.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jna/3.19.0/jline-terminal-jna-3.19.0.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.7.0/protobuf-java-3.7.0.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-interface/1.3.0/util-interface-1.3.0.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar"
+            ]
+        },
+        "java": {
+            "options": [
+                
+            ]
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/home/noahl/.sdkman/candidates/java/current",
+                "options": [
+                    "-Duser.dir=/home/noahl/tests/scala3/Iris"
+                ]
+            },
+            "mainClass": [
+                "iris.main"
+            ],
+            "classpath": [
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/os-lib_3/0.9.1/os-lib_3-0.9.1.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/geny_3/1.0.0/geny_3-1.0.0.jar",
+                "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar"
+            ],
+            "resources": [
+                "/home/noahl/tests/scala3/Iris/resources"
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "com.lihaoyi",
+                    "name": "os-lib_3",
+                    "version": "0.9.1",
+                    "artifacts": [
+                        {
+                            "name": "os-lib_3",
+                            "path": "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/os-lib_3/0.9.1/os-lib_3-0.9.1.jar"
+                        },
+                        {
+                            "name": "os-lib_3",
+                            "classifier": "sources",
+                            "path": "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/os-lib_3/0.9.1/os-lib_3-0.9.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.13.10",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala3-library_3",
+                    "version": "3.3.1",
+                    "artifacts": [
+                        {
+                            "name": "scala3-library_3",
+                            "path": "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1.jar"
+                        },
+                        {
+                            "name": "scala3-library_3",
+                            "classifier": "sources",
+                            "path": "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.lihaoyi",
+                    "name": "geny_3",
+                    "version": "1.0.0",
+                    "artifacts": [
+                        {
+                            "name": "geny_3",
+                            "path": "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/geny_3/1.0.0/geny_3-1.0.0.jar"
+                        },
+                        {
+                            "name": "geny_3",
+                            "classifier": "sources",
+                            "path": "/home/noahl/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/geny_3/1.0.0/geny_3-1.0.0-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "library"
+        ]
+    }
+}

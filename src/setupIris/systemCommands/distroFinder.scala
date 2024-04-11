@@ -1,11 +1,11 @@
-package setup_iris.systemCommands
+package setupIris.systemCommands
 
 import scala.sys.process._
 import scala.io.Source
 import java.io.File
 import bananatui.*
-import setup_iris.sysUpdate._
-import setup_iris.dependencyInstall._
+import setupIris.systemCommands.sysUpdate
+// import setupIris.systemCommands.*
 
 def getHome() = System.getProperty("user.home")
 
