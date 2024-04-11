@@ -1,4 +1,4 @@
-# TODO
+# TODO and why?
 
 Further steps to improve the project & the code quality.
 
@@ -60,29 +60,34 @@ Further steps to improve the project & the code quality.
 - [ ] Further refactoring:
     - [ ] Replacing bits of code that reimplement existing scala3 features or constructs
     - [ ] DRY (Don't Repeat Yourself principle) - refactor repeated code into functions
-    - [ ] Use `Try` instead of catching exceptions. E.g. replace
-    ```scala
-    try
-        <something>
-    catch
-        case e: Exception => -1
-    ```
-    by 
-    ```scala 
-    import scala.util.Try
+    - [ ] Use `Try` instead of catching exceptions.
+        <details>
+        <summary>E.g. replace (click to expand)</summary>
 
-    Try(<something>).getOrElse(-1)
-    ``` 
+        ```scala
+        try
+            <something>
+        catch
+            case e: Exception => -1
+        ```
+        by 
+        ```scala 
+        import scala.util.Try
 
-    or
+        Try(<something>).getOrElse(-1)
+        ``` 
 
-    ```scala
-    import scala.util.Try
+        or
 
-    Try { 
-        <a block of code> 
-    }.getOrElse(-1)
-    ```
+        ```scala
+        import scala.util.Try
+
+        Try { 
+            <a block of code> 
+        }.getOrElse(-1)
+        ```
+
+        </details><br />
 
     - [ ] A `Constants.scala` file with an object `Constant` that will hold values like  
     `System.getProperty("user.home")` or `flatpakGtkOverride()` so that they are define once (unless overridden) and stay consistent everywhere.
