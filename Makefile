@@ -7,11 +7,7 @@ SETUP_JAR=.jar
 IRIS_JAR=iris.jar
 FLATPAK_JAR=misc-flatpak-override.jar
 
-# When running for the 1st time
-# run has `run_setup` and `run_iris` as dependency => will run `run_setup` first then `run_iris`
-run: run_setup run_iris 
-	
-run_iris: 
+run: 
 	mill run
 
 # run setup jar. has `build_setup` as dependency => will run `build_setup` first

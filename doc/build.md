@@ -5,13 +5,19 @@ Most of these commands are in the project's Makefile, so if you have `Make`, you
 
 # Compiling the project
 
-To compile just iris (the root module)
+To compile everything
+```bash
+make build
+```
+> This will execute `mill compile && mill SetupIris.compile`, (see below)
+
+- To compile just iris (the root module)
 
 ```bash
 mill compile
 ```
 
-To compile iris-setup (module `SetupIris`)
+- To compile iris-setup (module `SetupIris`)
 
 ```bash
 mill SetupIris.compile
@@ -19,26 +25,32 @@ mill SetupIris.compile
 
 # Running the project
 
-To run just iris (the root module)
+- To run just iris (the root module)
 
 ```bash
-mill run
+make run
 ```
 
-To run iris-setup (module `SetupIris`)
+> This will call `mill run`.
+
+- To run iris-setup (module `SetupIris`)
 
 ```bash
-mill SetupIris.run
+make run_setup
 ```
 
+> This will call `mill SetupIris.run`
 
 # Building JARs
 
-With mill, you can build it like this:
+You can build it like this:
 
 ```bash
-mill assembly && mill SetupIris.assembly
+make package
 ```
+> This will run `mill assembly && mill SetupIris.assembly`
+
+This will create 2 jars `out/assembly.dest/out.jar` and `out/SetupIris/assembly.dest/out.jar`. 
 
 Having Scala in your system, you can then run it as if it was an executable:
 
@@ -53,24 +65,7 @@ or with java
 java -jar out/assembly.dest/out.jar
 java -jar out/SetupIris/assembly.dest/out.jar
 ```
+
 By default mill builds a "bootstrap assembly" jar or "bootstrap fat jar".  
 This means that the jar will contain the Scala runtime and the dependencies and will work like an executable.  
 A bootstrap works like an executable, in the sense that you can run it as if it was one. Other than that its a normal jar.
-
-## Building a lightweight JAR
-
-You can build a lightweight JAR with scala-cli:
-
-```bash
-make light_jar
-```
-
-These can only be run with Scala-CLI, as the makefile will call
-
-```bash
-scala-cli --power package -f src/iris src/lib --library -o iris.jar
-scala-cli --power package -f src/setupIris src/lib --library -o setup-iris.jar
-scala-cli --power package -f src/misc src/lib --library -o misc_flatpak.jar
-```
-
-This will create 3 jars, `iris.jar`, `setup-iris.jar` and `misc_flatpak.jar`.  
