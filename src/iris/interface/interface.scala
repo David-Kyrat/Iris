@@ -2,7 +2,7 @@ package iris.interface
 import lib.bananatui.*
 import iris.config._
 import iris.theming._
-import iris.themeSelector._
+import iris.interface._
 
 def mainMenu(): Unit =
   def create(existingConfs: Array[String]): String =
