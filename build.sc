@@ -24,4 +24,9 @@ object Iris extends RootModule with ScalaModule {
         // HINT: We tell mill that the IrisSetup module is composed of files in /src/setupIris and /src/lib
         def sources = T.sources(src / "setupIris", src / "lib")
     }
+    
+    object MiscFlatpak extends ScalaModule {
+        def scalaVersion = Iris.scalaVersion
+        def sources = T.sources(src / "misc", src / "lib")
+    }
 }
