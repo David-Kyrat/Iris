@@ -25,9 +25,9 @@ hs_err_pid*
 
 # Never put jar in the repo, as it's automatically generated, and often too big to be accepted by github
 *.jar
+out
 
 # Auto-generated files by mill
-out
 .bloop
 **/.scala-build
 **/.bsp

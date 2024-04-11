@@ -1,66 +1,75 @@
 # Building Iris from source
 
-Iris requires Scala 3 to build from source. You can use the scala compiler directly, or use scala-cli.
-Most of these commands are in the project's Makefile, so if you have `Make`, you can run them.
+Iris requires Scala 3 and [mill](https://github.com/com-lihaoyi/mill) (installation instruction [here](https://mill-build.com/mill/Installation_IDE_Support.html#_bootstrap_scripts), or install it with coursier `cs intall mill`)  
+to build from source.
+Most of these commands are Makefile target that call mill under the hood for simplicity. 
+Installing Make: `sudo <your_package_manager> install make` (unless you're on Arch, in that case I suppose you already have it.)  
 
+If you want to install coursier (the scala application/tool installer) which can be used to install & update scala, scalafmt, mill, sbt etc... pretty much everything.  It is available [here](https://get-coursier.io/docs/cli-installation).
 
-# Building a lightweight JAR
+# Compiling the project
 
-You can build a lightweight JAR with this command:
-
+To compile everything
 ```bash
 make build
 ```
+> This will run `mill compile && mill SetupIris.compile`, (see below)
 
-This builds Iris and the setup utility using the scala compiler. You can run them with scala: (watch out, these will rebuilt the JARs. So you don't need the step above)
-
-```bash
-make run_iris run_setup
-```
-
-If you prefer to use Scala-CLI instead, here's the command:
+- To compile just iris (the root module)
 
 ```bash
-scala-cli --power package iris lib --library -o iris.jar
-scala-cli --power package setup-iris lib --library -o setup-iris.jar
+mill compile
 ```
 
-These can only be run with Scala-CLI.
-
-# Building an assembly JAR
-
-With Scala-CLI, you can build an assembly JAR, which contains all the runtime and dependencies and so it can be run directly with Java:
+- To compile iris-setup (module `SetupIris`)
 
 ```bash
-make iris_fatjar setup_fatjar
+mill SetupIris.compile
 ```
 
-You can run Iris with Java:
+# Running the project
+
+- To run just iris (the root module)
 
 ```bash
-java -jar iris.jar
-java -jar setup-iris.jar
+make run
 ```
 
-# Building bootstrap JARs
+> This will run `mill run`.
 
-A bootstrap works like an executable, in the sense that you can run it as if it was one.
-
-With Scala-CLI, you can build a bootstrap, like this:
+- To run iris-setup (module `SetupIris`)
 
 ```bash
-make bootstrap_jar_nodep
+make run_setup
 ```
+
+> This will run `mill SetupIris.run`
+
+# Building JARs
+
+You can build it like this:
+
+```bash
+make package
+```
+> This will run `mill assembly && mill SetupIris.assembly`
+
+This will create 2 jars `out/assembly.dest/out.jar` and `out/SetupIris/assembly.dest/out.jar`. 
 
 Having Scala in your system, you can then run it as if it was an executable:
 
 ```bash
-./iris.jar
-./setup-iris.jar
+./out/assembly.dest/out.jar
+./out/SetupIris/assembly.dest/out.jar
 ```
 
-If you want to include all dependencies in your bootstrap and only rely on Java, then you can build the following way:
+or with java 
 
 ```bash
-make bootstrap_jar
+java -jar out/assembly.dest/out.jar
+java -jar out/SetupIris/assembly.dest/out.jar
 ```
+
+By default mill builds a "bootstrap assembly" jar or "bootstrap fat jar".  
+This means that the jar will contain the Scala runtime and the dependencies and will work like an executable.  
+A bootstrap works like an executable, in the sense that you can run it as if it was one. Other than that its a normal jar.
