@@ -33,4 +33,4 @@ move_jar:
 
 
 clean:
-	mill clean; rm *.jar
+	-mill clean; rm *.jar
