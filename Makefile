@@ -1,5 +1,5 @@
 DIR_IRIS=iris/*.scala iris/*/*.scala
-DIR_SETUP=setup-iris/*.scala setup-iris/*/*.scala
+DIR_SETUP=setupIris/*.scala setupIris/*/*.scala
 DIR_LIB=lib/*/*.scala
 DIR_MISC=misc/*.scala
 

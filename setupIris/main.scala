@@ -1,9 +1,7 @@
-package setup.setup
-import bananatui.*
-import bananacmd.isProgramRoot
-import setup.distroFinder._
-import setup.sysUpdate._
-import setup.dependencyInstall._
+package setupIris
+import lib.bananatui.*
+import lib.bananacmd.isProgramRoot
+import setupIris.systemCommands._
 
 
 @main def main() =

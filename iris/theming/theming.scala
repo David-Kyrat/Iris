@@ -4,9 +4,10 @@ import scala.sys.process._, scala.io.Source
 import java.nio.file.{Files, Path}, java.io.File
 import java.io.FileWriter
 
-import iris.themeSelector._, iris.config._, iris.interface._
-import bananatui.*
-import bananacmd.{getHome, command_root}
+import iris.config._, iris.interface._
+import lib.bananatui.*
+import lib.bananacmd.{getHome, command_root}
+import lib.fileops
 
 // Returns every location of gtk folders as one
 def gtkList(): List[String] =

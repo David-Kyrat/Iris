@@ -1,6 +1,6 @@
 package misc
 import scala.sys.process._
-import bananatui.*
+import lib.bananatui.*
 
 
 @main def main() =

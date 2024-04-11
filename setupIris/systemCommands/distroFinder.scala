@@ -1,11 +1,11 @@
-package setup.distroFinder
+package setupIris.systemCommands
 
 import scala.sys.process._
 import scala.io.Source
 import java.io.File
-import bananatui.*
-import setup.sysUpdate._
-import setup.dependencyInstall._
+import lib.bananatui.*
+import setupIris.systemCommands.sysUpdate
+// import setupIris.systemCommands.*
 
 def getHome() = System.getProperty("user.home")
 
