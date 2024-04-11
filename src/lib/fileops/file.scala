@@ -1,4 +1,4 @@
-package fileops
+package lib.fileops
 
 import java.io.File, java.nio.file.Files, java.nio.file.Path
 

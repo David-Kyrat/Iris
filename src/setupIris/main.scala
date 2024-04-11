@@ -1,6 +1,6 @@
 package setupIris
-import bananatui.*
-import bananacmd.isProgramRoot
+import lib.bananatui.*
+import lib.bananacmd.isProgramRoot
 import setupIris.systemCommands._
 
 

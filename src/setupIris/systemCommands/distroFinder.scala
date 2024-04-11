@@ -3,7 +3,7 @@ package setupIris.systemCommands
 import scala.sys.process._
 import scala.io.Source
 import java.io.File
-import bananatui.*
+import lib.bananatui.*
 import setupIris.systemCommands.sysUpdate
 // import setupIris.systemCommands.*
 

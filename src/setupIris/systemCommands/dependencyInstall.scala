@@ -6,7 +6,7 @@ import scala.io.Source
 import scala.sys.process._
 import java.io.File
 import java.io.FileOutputStream
-import bananatui.*
+import lib.bananatui.*
 
 
 def pacDependency() = List("pacman", "-Sy", "qt5ct", "qt6ct", "kvantum", "kvantum-qt5", "--noconfirm").!< 

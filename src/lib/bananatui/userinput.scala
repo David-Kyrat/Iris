@@ -1,4 +1,4 @@
-package bananatui
+package lib.bananatui
 
 import java.io.File
 import scala.sys.process.*

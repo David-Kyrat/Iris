@@ -1,4 +1,4 @@
-package bananacmd
+package lib.bananacmd
 
 import scala.sys.process.*
 

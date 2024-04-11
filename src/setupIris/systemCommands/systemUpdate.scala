@@ -1,7 +1,7 @@
 package setupIris.systemCommands
 
 import setupIris.systemCommands.{aptWho, getPackageManager}
-import bananatui.*
+import lib.bananatui.*
 import scala.sys.process._
 
 
