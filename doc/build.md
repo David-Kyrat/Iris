@@ -1,8 +1,11 @@
 # Building Iris from source
 
-Iris requires Scala 3 and [mill](https://github.com/com-lihaoyi/mill) (installation instruction [here](https://mill-build.com/mill/Installation_IDE_Support.html#_bootstrap_scripts), you can also install it with coursier `cs intall mill`) to build from source. 
+Iris requires Scala 3 and [mill](https://github.com/com-lihaoyi/mill) (installation instruction [here](https://mill-build.com/mill/Installation_IDE_Support.html#_bootstrap_scripts), or install it with coursier `cs intall mill`)  
+to build from source.
 Most of these commands are Makefile target that call mill under the hood for simplicity. 
-Installing Make: `sudo <your_package_manager> install make` (unless you're on Arch, in that case I suppose you already have it.)
+Installing Make: `sudo <your_package_manager> install make` (unless you're on Arch, in that case I suppose you already have it.)  
+
+If you want to install coursier (the scala application/tool installer) which can be used to install & update scala, scalafmt, mill, sbt etc... pretty much everything.  It is available [here](https://get-coursier.io/docs/cli-installation).
 
 # Compiling the project
 
