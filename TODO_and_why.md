@@ -7,7 +7,11 @@ Further steps to improve the project & the code quality.
 <div style="color: blue" >
 
 - [ ] **Package must match the directory structure.**  
-    This is **extremely important** as it will tell the jvm / compiler  **where to look** for files, when you try to **import functions** (and it is also the whole point of packages).  
+    This is **extremely important** as it will tell the jvm / compiler  **where to look** for files, when you try to **import functions** (and it is also the whole point of packages). 
+    ### Why?
+    <details> 
+    <summary>Click to expand</summary>
+
     - Putting `package iris.theming` on top of a file *whatever.scala*, tells scala:  
     *"Hey `whatever.scala` is in the directory `iris/theming`"*.  
     (e.g. putting `package iris.iris` on top of `iris/main.scala` tells scala that your main.scala is in `iris/iris` directory).  
@@ -35,6 +39,7 @@ Further steps to improve the project & the code quality.
 
     However creating object like this, is *not mandatory* and you could just import everything from the `interface` package without any major problem.
 
+     </details>
 
     
 
@@ -132,5 +137,4 @@ Further steps to improve the project & the code quality.
 
     val x = printHello() // everybody sees that writing this makes no sense
     ```
-
 
