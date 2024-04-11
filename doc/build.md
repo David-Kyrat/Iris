@@ -1,7 +1,8 @@
 # Building Iris from source
 
-Iris requires Scala 3 to build from source. You can use the scala compiler directly, or use scala-cli.
-Most of these commands are in the project's Makefile, so if you have `Make`, you can run them.
+Iris requires Scala 3 and [mill](https://github.com/com-lihaoyi/mill) (installation instruction [here](https://mill-build.com/mill/Installation_IDE_Support.html#_bootstrap_scripts), you can also install it with coursier `cs intall mill`) to build from source. 
+Most of these commands are Makefile target that call mill under the hood for simplicity. 
+Installing Make: `sudo <your_package_manager> install make` (unless you're on Arch, in that case I suppose you already have it.)
 
 # Compiling the project
 
@@ -9,7 +10,7 @@ To compile everything
 ```bash
 make build
 ```
-> This will execute `mill compile && mill SetupIris.compile`, (see below)
+> This will run `mill compile && mill SetupIris.compile`, (see below)
 
 - To compile just iris (the root module)
 
@@ -31,7 +32,7 @@ mill SetupIris.compile
 make run
 ```
 
-> This will call `mill run`.
+> This will run `mill run`.
 
 - To run iris-setup (module `SetupIris`)
 
@@ -39,7 +40,7 @@ make run
 make run_setup
 ```
 
-> This will call `mill SetupIris.run`
+> This will run `mill SetupIris.run`
 
 # Building JARs
 
